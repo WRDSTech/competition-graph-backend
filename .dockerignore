@@ -1,0 +1,11 @@
+.dockerignore
+.git*
+*.md
+.cache
+quick_test.ipynb
+.env
+.flaskenv
+.idea
+venv/
+k8s/
+tests/
