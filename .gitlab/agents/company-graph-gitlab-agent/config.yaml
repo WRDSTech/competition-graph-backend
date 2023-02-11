@@ -1,0 +1,3 @@
+ci_access:
+  projects:
+    - id: "WRDSEngineering/company_graph_web_service"
