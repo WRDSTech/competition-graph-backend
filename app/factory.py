@@ -1,5 +1,5 @@
 from quart import Quart
-
+from app.blueprints.comp_graph_bp import comp_graph_controller
 from app.container import ApplicationContainer
 
 
@@ -14,6 +14,5 @@ def create_app() -> Quart:
         "app.services",
         "app.blueprints",
     ])
-    # TODO: Register blueprint here
-
+    app.register_blueprint(comp_graph_controller)
     return app

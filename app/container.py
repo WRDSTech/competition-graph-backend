@@ -17,4 +17,5 @@ class ApplicationContainer(containers.DeclarativeContainer):
     )
     comp_graph_bp = providers.Container(
         CompGraphBpContainer,
+        comp_graph_svc=comp_graph_svc.comp_graph_service
     )
