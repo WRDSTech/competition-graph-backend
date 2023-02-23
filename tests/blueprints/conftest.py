@@ -33,7 +33,7 @@ class MockCompGraphSvc(CompGraphService):
     def __init__(self) -> None:
         ...
 
-    async def get_surrouding_by_node(self, node_id, expand_number_of_layers) -> Graph:
+    async def get_surrounding_by_node(self, node_id, expand_number_of_layers) -> Graph:
         test_surrounding = Graph(
             nodes=[Entity(id="!!!!!====!!!!", name="!!!!!====")], links=[])
 

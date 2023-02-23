@@ -19,5 +19,5 @@ from app.entities.graph_entities import Graph
 
 
 class ServiceContainer(containers.DeclarativeContainer):
-    repo = providers.Resource(CompanyGraphDao)
+    repo = providers.Dependency(instance_of=CompanyGraphDao)
     comp_graph_service = providers.Singleton(CompGraphServiceImpl, repo=repo)

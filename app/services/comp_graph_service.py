@@ -3,6 +3,6 @@ from app.entities.graph_entities import Graph
 
 
 class CompGraphService(abc.ABC):
-    @abc.abstractclassmethod
-    async def get_surrouding_by_node(self, node_id, expand_number_of_layers) -> Graph:
+    @abc.abstractmethod
+    async def get_surrounding_by_node(self, node_id: int, expand_number_of_layers: int) -> Graph:
         raise NotImplementedError

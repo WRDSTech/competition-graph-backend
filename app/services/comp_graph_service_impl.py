@@ -7,7 +7,7 @@ class CompGraphServiceImpl(CompGraphService):
     def __init__(self, repo: CompanyGraphDao) -> None:
         self.repo = repo
 
-    async def get_surrouding_by_node(self, node_id, expand_number_of_layers) -> Graph:
+    async def get_surrounding_by_node(self, node_id, expand_number_of_layers) -> Graph:
         surrounding = self.repo.get_surrounding_node_by_center(
             node_id, expand_number_of_layers
         )
