@@ -7,7 +7,7 @@ from app.entities.graph_entities import Graph, Entity
 comp_graph_controller = Blueprint("CompGraph", __name__)
 
 
-@comp_graph_controller.get("/api/comp/surrouding")
+@comp_graph_controller.get("/api/comp/surrounding")
 @inject
 async def get_surrouding_by_node(
     comp_graph_service: CompGraphService = Provide[
