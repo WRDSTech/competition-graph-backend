@@ -1,0 +1,12 @@
+{
+  "0": {
+    "entity_1": "AXP",
+    "entity_2": "Global Consumer Services Group",
+    "relation": "unknown"
+  },
+  "1": {
+    "entity_1": "AXP",
+    "entity_2": "Global Network",
+    "relation": "unknown"
+  }
+}
