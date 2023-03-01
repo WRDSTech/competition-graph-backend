@@ -75,10 +75,10 @@ def load_json_files(*files: str) -> MapBundle:
         2: "competition",
     }
     complete_graph = collections.defaultdict(list)
-    entity2id = collections.defaultdict(int)
     entity_map = collections.defaultdict(str)
     eid = 0
     for path in files:
+        entity2id = collections.defaultdict(int)
         eid = _read_graph_from_json_file(
             path,
             eid,
