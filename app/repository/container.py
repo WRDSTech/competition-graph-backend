@@ -61,11 +61,6 @@ def _read_graph_from_json_file(path: str,
                 entity_map[eid] = target_e
                 eid += 1
 
-            if entity2id[target_e] in graph[entity2id[source_e]]:
-                continue
-            if entity2id[source_e] in graph[entity2id[target_e]]:
-                continue
-
             graph[entity2id[source_e]].append((entity2id[target_e], rid))
             graph[entity2id[target_e]].append((entity2id[source_e], rid))
             relationship_map[rid] = relation
