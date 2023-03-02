@@ -26,11 +26,13 @@ class EmptyJsonFileException(Exception):
 
 
 def _read_graph_from_json_file(path: str,
-                               start_eid: int,
+                               eid: int,
+                               rid: int,
                                entity2id: Dict[str, int],
                                entity_map: Dict[int, str],
+                               relationship_map: Dict[int, str],
                                relation2id: Dict[str, int],
-                               graph: collections.defaultdict[int, List[Tuple[int, int]]]) -> int:
+                               graph: collections.defaultdict[int, List[Tuple[int, int]]]) -> Tuple[int, int]:
     if not path.endswith(".json"):
         raise InvalidFileTypeException("Filetype must be json.")
 
@@ -38,7 +40,6 @@ def _read_graph_from_json_file(path: str,
         partial_graph: Dict[str, dict] = json.load(f)
         if not partial_graph:
             raise EmptyJsonFileException("the file is empty!")
-        eid = start_eid
 
         for _, edge in partial_graph.items():
             source_e = edge["entity_1"]
@@ -48,6 +49,8 @@ def _read_graph_from_json_file(path: str,
             # source/target entity is empty
             if not source_e or not target_e:
                 continue
+            if relation == "competetion":
+                relation = "competition"
 
             if source_e not in entity2id:
                 entity2id[source_e] = eid
@@ -58,9 +61,12 @@ def _read_graph_from_json_file(path: str,
                 entity_map[eid] = target_e
                 eid += 1
 
-            graph[entity2id[source_e]].append((entity2id[target_e], relation2id[relation]))
-            graph[entity2id[target_e]].append((entity2id[source_e], relation2id[relation]))
-    return eid
+            graph[entity2id[source_e]].append((entity2id[target_e], rid))
+            graph[entity2id[target_e]].append((entity2id[source_e], rid))
+            relationship_map[rid] = relation
+            rid += 1
+
+    return eid, rid
 
 
 def load_json_files(*files: str) -> MapBundle:
@@ -69,21 +75,20 @@ def load_json_files(*files: str) -> MapBundle:
         "product": 1,
         "competition": 2,
     }
-    relationship_map = {
-        0: "unknown",
-        1: "product",
-        2: "competition",
-    }
     complete_graph = collections.defaultdict(list)
     entity_map = collections.defaultdict(str)
+    relationship_map = collections.defaultdict(str)
     eid = 0
+    rid = 0
     for path in files:
         entity2id = collections.defaultdict(int)
-        eid = _read_graph_from_json_file(
+        eid, rid = _read_graph_from_json_file(
             path,
             eid,
+            rid,
             entity2id,
             entity_map,
+            relationship_map,
             relation2id,
             complete_graph,
         )
