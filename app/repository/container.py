@@ -38,6 +38,7 @@ def _read_graph_from_json_file(path: str,
 
     with open(path, encoding="utf8") as f:
         partial_graph: Dict[str, dict] = json.load(f)
+        seen_edges = set()
         if not partial_graph:
             raise EmptyJsonFileException("the file is empty!")
 
@@ -61,6 +62,12 @@ def _read_graph_from_json_file(path: str,
                 entity_map[eid] = target_e
                 eid += 1
 
+            if (entity2id[source_e], entity2id[target_e]) in seen_edges:
+                continue
+            if (entity2id[target_e], entity2id[source_e]) in seen_edges:
+                continue
+
+            seen_edges.add((entity2id[source_e], entity2id[target_e]))
             graph[entity2id[source_e]].append((entity2id[target_e], rid))
             graph[entity2id[target_e]].append((entity2id[source_e], rid))
             relationship_map[rid] = relation
