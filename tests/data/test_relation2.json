@@ -23,5 +23,20 @@
     "entity_1": "AXP",
     "entity_2": "Standard Chartered Bank",
     "relation": "unknown"
+  },
+  "5": {
+    "entity_1": "HWM-P",
+    "entity_2": "ATI",
+    "relation": "unknown"
+  },
+  "6": {
+    "entity_1": "AXP",
+    "entity_2": "Standard Chartered Bank",
+    "relation": "competition"
+  },
+  "7": {
+    "entity_1": "AXP",
+    "entity_2": "MSFT",
+    "relation": "competition"
   }
 }
