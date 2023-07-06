@@ -1,4 +1,0 @@
-3 
-unknown     0 
-product     1 
-competetion     2 
