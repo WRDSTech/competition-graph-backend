@@ -1,7 +1,7 @@
 from quart import Quart
 from app.blueprints.comp_graph_bp import comp_graph_controller
 from app.container import ApplicationContainer
-
+from quart_cors import cors
 
 def create_app() -> Quart:
     app_container = ApplicationContainer()
@@ -15,4 +15,5 @@ def create_app() -> Quart:
         "app.blueprints",
     ])
     app.register_blueprint(comp_graph_controller)
+    cors(app)
     return app
