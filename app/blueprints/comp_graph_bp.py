@@ -35,3 +35,31 @@ async def get_surrounding_by_node(
     result = await comp_graph_service.get_surrounding_by_node(node_id, expand_number_of_layers)
 
     return result.dict()
+
+
+@comp_graph_controller.get("/api/comp/surrounding/new")
+@validate_querystring(GetSurroundingByNodeRequest)
+@inject
+async def bfs(
+        query_args: GetSurroundingByNodeRequest,
+        comp_graph_service: CompGraphService = Provide[
+            ApplicationContainer.comp_graph_bp.comp_graph_svc
+        ],
+):
+    node_id = query_args.node_id
+    expand_number_of_layers = query_args.expand_number_of_layers
+    if node_id is None:
+        return {"message": "node_id can not be empty"}, http.HTTPStatus.BAD_REQUEST
+    if expand_number_of_layers is None:
+        return {"message": "expand_number_of_layers can not be empty"}, http.HTTPStatus.BAD_REQUEST
+
+    # below flags are true by default if not included in the request
+    competition = query_args.competition
+    product = query_args.product
+    other = query_args.other
+    unknown = query_args.unknown
+    flags = [competition, product, other, unknown]
+
+    result = await comp_graph_service.bfs(node_id, expand_number_of_layers, flags)
+
+    return result
