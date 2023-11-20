@@ -3,6 +3,7 @@ from neo4j import GraphDatabase
 from app.services.comp_graph_service import CompGraphService
 from app.repository.comp_graph_repository import CompanyGraphDao
 from app.entities.graph_entities import Graph
+from settings import NEO4J_GRAPH_DB_URI, NEO4J_GRAPH_DB_USER, NEO4J_GRAPH_DB_PASSWORD
 
 
 class CompGraphServiceImpl(CompGraphService):
@@ -16,33 +17,10 @@ class CompGraphServiceImpl(CompGraphService):
         return surrounding
 
     async def bfs(self, node_id, expand_number_of_layers, flags):
-        uri = 'bolt://172.17.0.2:7687'
-        user = 'neo4j'
-        password = 'graph2023'
+        uri = NEO4J_GRAPH_DB_URI
+        user = NEO4J_GRAPH_DB_USER
+        password = NEO4J_GRAPH_DB_PASSWORD
         driver = GraphDatabase.driver(uri, auth=(user, password))
-
-        # [abandoned] bfs get nodes then query edges? if so, get nodeIds instead of path
-        # [abandoned] problem: no 'unknown' relationType exists in dow30 graph, including it in types will cause error
-        # bfs_query = """
-        #             MATCH (source:Node{id:'$node_id'})
-        #             CALL gds.bfs.stream('dow30', {
-        #               sourceNode: source,
-        #               maxDepth: $depth,
-        #               relationshipTypes: $types
-        #             })
-        #             YIELD path
-        #             CALL apoc.graph.fromPaths([path],'test', {})
-        #             YIELD graph AS g
-        #             RETURN g.nodes
-        #             """
-
-        # bfs_query = bfs_query.replace('$node_id', str(node_id))
-        # bfs_query = bfs_query.replace('$depth', str(expand_number_of_layers))
-        # bfs_query = bfs_query.replace('$types', str(types))
-
-        # with driver.session() as session:
-        #     results = session.read_transaction(
-        #         lambda tx: tx.run(bfs_query).data())
 
         types = ['competition', 'product', 'other', 'unknown']
 
@@ -69,7 +47,14 @@ class CompGraphServiceImpl(CompGraphService):
 
         with driver.session() as session:
             results = session.read_transaction(
-                lambda tx: tx.run(query).data())
+                lambda tx: tx.run(query).data())[0]
 
         driver.close()
+
+        # format data to same structure as the original implementation
+        results['links'] = results.pop('relationships')
+        for i in range(len(results['links'])):
+            lis = results['links'][i]
+            results['links'][i] = {'category': lis[1], "source": lis[0]["id"], "target": lis[2]["id"]}
+
         return results
