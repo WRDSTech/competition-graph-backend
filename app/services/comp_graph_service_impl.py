@@ -3,7 +3,7 @@ from neo4j import GraphDatabase
 from app.services.comp_graph_service import CompGraphService
 from app.repository.comp_graph_repository import CompanyGraphDao
 from app.entities.graph_entities import Graph
-from settings import NEO4J_GRAPH_DB_URI, NEO4J_GRAPH_DB_USER, NEO4J_GRAPH_DB_PASSWORD
+from secrets import NEO4J_GRAPH_DB_URI, NEO4J_GRAPH_DB_USER, NEO4J_GRAPH_DB_PASSWORD
 
 
 class CompGraphServiceImpl(CompGraphService):
