@@ -34,3 +34,4 @@ Werkzeug==2.2.2
 wsproto==1.2.0
 Flask-Cors==3.0.10
 quart-cors==0.6.0
+neo4j==5.14.1

@@ -8,3 +8,4 @@ TRAIN_FILE_LOCATION = os.getenv('TRAIN_FILE_LOCATION', "app/data/train2id.txt")
 TEST_ENTITY_FILE_LOCATION = os.getenv('TEST_ENTITY_FILE_LOCATION', "tests/data/test_entity.txt")
 TEST_RELATION_FILE_LOCATION = os.getenv('TEST_RELATION_FILE_LOCATION', "tests/data/test_relation.txt")
 TEST_TRAIN_FILE_LOCATION = os.getenv('TEST_TRAIN_FILE_LOCATION', "tests/data/test_graph.txt")
+
