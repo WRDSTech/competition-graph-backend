@@ -4,6 +4,8 @@ from operator import truediv
 from app.entities.graph_entities import Entity, EntityRelation, Graph
 from app.repository.comp_graph_repository import CompanyGraphDao
 
+from neo4j import GraphDatabase
+
 
 class CompanyGraphDaoImpl(CompanyGraphDao):
     def __init__(self, entity_map, relationship_map, complete_graph):
@@ -11,20 +13,92 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
         self.relationship_map = relationship_map
         self.complete_graph = complete_graph
 
+        self.driver = GraphDatabase.driver(
+            # "bolt://host.docker.internal:7687",
+            "bolt://localhost:7687",
+            auth=("neo4j", "wrdsdbms")
+        )
+
     def get_surrounding_node_by_center(self, center_node, dist_to_center) -> Graph:
         if dist_to_center < 0 or center_node not in self.entity_map:
             return Graph(nodes=[], links=[])
-        entity_queue = collections.deque([center_node])
+
+        cypher_query = '''MATCH p=(a:Node {{id:\"{}\"}})-[*..{}]->(b:Node)
+                          WITH [r IN relationships(p) | [startNode(r), properties(r), endNode(r)]] AS p, b
+                          RETURN p, b'''.format(center_node, dist_to_center)
+        print(cypher_query)
+
         g = Graph(nodes=[Entity(id=center_node, name=self.entity_map[center_node])], links=[])
-        visited_entities = {center_node}
-        curr_layer = 0
 
-        while len(entity_queue) > 0:
-            if curr_layer >= dist_to_center:
-                break
-            self._process_current_layer(entity_queue, g, visited_entities)
-            curr_layer += 1
+        with self.driver.session(database="neo4j") as session:
+            results = session.read_transaction(
+                lambda tx, cypher_query=cypher_query: tx.run(cypher_query).data())
+            for record in results:
+                print(record)
+                # Append nodes
+                neighbor = record['b']
+                g.nodes.append(Entity(id=neighbor['id'], name=neighbor['name']))
+                # Append links
+                # print(record['r'])
+                
+                properties = record['p']
+                for property in properties:
+                    g.links.append(EntityRelation(id=property[1]["id"], category=property[1]["category"], 
+                                                   source=property[0]["id"], target=property[2]["id"]))
 
+            self.driver.close()
+        print(g)
+        return g
+    
+    def get_sample_graph(self) -> Graph:
+        import_query = '''CALL gds.graph.project(
+                            'graph',
+                            "*",
+                            "*"
+                          )
+                          YIELD
+                          graphName AS graph, nodeProjection, nodeCount AS nodes, relationshipProjection, relationshipCount AS rels'''
+        
+        cypher_query = '''CALL {
+                              MATCH (a)-[r]-(b)
+                              WITH a, COUNT(r) AS degree
+                              ORDER BY degree DESC
+                              LIMIT 5
+                              RETURN collect(id(a)) AS sourceIds
+                          }
+                          UNWIND sourceIds AS sourceId
+                          MATCH (source)
+                          WHERE id(source) = sourceId
+                          CALL gds.bfs.stream('graph', {
+                              sourceNode: source,
+                              maxDepth: 5
+                          })
+                          YIELD path
+                          RETURN nodes(path) AS nodesInPath, relationships(path) AS relationshipsInPath'''
+        
+        print(cypher_query)
+        g = Graph(nodes=[], links=[])
+
+        with self.driver.session(database="neo4j") as session:
+            session.read_transaction(
+                lambda tx, cypher_query=import_query: tx.run(cypher_query).data())
+            results = session.read_transaction(
+                lambda tx, cypher_query=cypher_query: tx.run(cypher_query).data())
+            for record in results:
+                print(record)
+                # Append nodes
+                neighbor = record['b']
+                g.nodes.append(Entity(id=neighbor['id'], name=neighbor['name']))
+                # Append links
+                # print(record['r'])
+                
+                properties = record['p']
+                for property in properties:
+                    g.links.append(EntityRelation(id=property[1]["id"], category=property[1]["category"], 
+                                                  source=property[0]["id"], target=property[2]["id"]))
+
+            self.driver.close()
+        
         return g
 
     def _process_current_layer(self, entity_queue, g, visited_entities):

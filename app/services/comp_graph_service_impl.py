@@ -12,3 +12,6 @@ class CompGraphServiceImpl(CompGraphService):
             node_id, expand_number_of_layers
         )
         return surrounding
+    
+    async def get_sample(self) -> Graph:
+        return self.repo.get_sample_graph()
