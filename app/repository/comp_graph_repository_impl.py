@@ -19,6 +19,73 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
             auth=("neo4j", "wrdsdbms")
         )
 
+        import_query = '''CALL gds.graph.exists('graph') YIELD exists AS graphExists
+                          WITH graphExists
+                          WHERE NOT graphExists
+                          CALL gds.graph.project(
+                            'graph',
+                            "*",
+                            "*"
+                          )
+                          YIELD
+                          graphName AS graph, nodeProjection, nodeCount AS nodes, relationshipProjection, relationshipCount AS rels'''
+        with self.driver.session(database="neo4j") as session:
+            session.read_transaction(
+                lambda tx, cypher_query=import_query: tx.run(cypher_query).data())
+            self.driver.close()
+
+    def get_dow30(self) -> Graph:
+        cypher_query = '''MATCH (a)-[b]->(c)
+                          WHERE a.graph="dow30"
+                          RETURN a, b.id AS id, b.category AS category, startNode(b).id AS source, endNode(b).id AS target'''
+        print(cypher_query)
+
+        g = Graph(nodes=[], links=[])
+
+        with self.driver.session(database="neo4j") as session:
+            results = session.read_transaction(
+                lambda tx, cypher_query=cypher_query: tx.run(cypher_query).data())
+            for record in results:
+                print(record)
+                # Append nodes
+                node = record['a']
+                g.nodes.append(Entity(id=node['id'], name=node['name']))
+                # Append links
+                # print(record['r'])
+                
+                g.links.append(EntityRelation(id=record["id"], category=record["category"], 
+                                                source=record["source"], target=record["target"]))
+
+            self.driver.close()
+        print(g)
+        return g
+    
+    def get_sp500(self) -> Graph:
+        cypher_query = '''MATCH (a)-[b]->(c)
+                          WHERE a.graph="sp500"
+                          RETURN a, b.id AS id, b.category AS category, startNode(b).id AS source, endNode(b).id AS target'''
+        print(cypher_query)
+
+        g = Graph(nodes=[], links=[])
+
+        with self.driver.session(database="neo4j") as session:
+            results = session.read_transaction(
+                lambda tx, cypher_query=cypher_query: tx.run(cypher_query).data())
+            for record in results:
+                print(record)
+                # Append nodes
+                node = record['a']
+                g.nodes.append(Entity(id=node['id'], name=node['name']))
+                # Append links
+                # print(record['r'])
+                
+                g.links.append(EntityRelation(id=record["id"], category=record["category"], 
+                                                source=record["source"], target=record["target"]))
+
+            self.driver.close()
+        print(g)
+        return g
+
     def get_surrounding_node_by_center(self, center_node, dist_to_center) -> Graph:
         if dist_to_center < 0 or center_node not in self.entity_map:
             return Graph(nodes=[], links=[])
@@ -38,9 +105,8 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
                 # Append nodes
                 neighbor = record['b']
                 g.nodes.append(Entity(id=neighbor['id'], name=neighbor['name']))
-                # Append links
-                # print(record['r'])
                 
+                # Append links
                 properties = record['p']
                 for property in properties:
                     g.links.append(EntityRelation(id=property[1]["id"], category=property[1]["category"], 
@@ -51,13 +117,7 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
         return g
     
     def get_sample_graph(self) -> Graph:
-        import_query = '''CALL gds.graph.project(
-                            'graph',
-                            "*",
-                            "*"
-                          )
-                          YIELD
-                          graphName AS graph, nodeProjection, nodeCount AS nodes, relationshipProjection, relationshipCount AS rels'''
+        
         
         cypher_query = '''CALL {
                               MATCH (a)-[r]-(b)
@@ -80,22 +140,18 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
         g = Graph(nodes=[], links=[])
 
         with self.driver.session(database="neo4j") as session:
-            session.read_transaction(
-                lambda tx, cypher_query=import_query: tx.run(cypher_query).data())
             results = session.read_transaction(
                 lambda tx, cypher_query=cypher_query: tx.run(cypher_query).data())
             for record in results:
                 print(record)
                 # Append nodes
-                neighbor = record['b']
-                g.nodes.append(Entity(id=neighbor['id'], name=neighbor['name']))
-                # Append links
-                # print(record['r'])
+                for node in record['nodesInPath']:
+                    g.nodes.append(Entity(id=node['id'], name=node['name']))
                 
-                properties = record['p']
-                for property in properties:
-                    g.links.append(EntityRelation(id=property[1]["id"], category=property[1]["category"], 
-                                                  source=property[0]["id"], target=property[2]["id"]))
+                # Append links
+                for link in record['relationshipsInPath']:
+                    print(link)
+                    g.links.append(EntityRelation(id=0, category="null", source=link[0]["id"], target=link[2]["id"]))
 
             self.driver.close()
         

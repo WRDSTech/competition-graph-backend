@@ -16,6 +16,38 @@ async def handle_request_validation_error(arg):
     return {"message": "Request parameter should be an integer"}, 400
 
 
+@comp_graph_controller.get("/api/comp/dow30")
+@inject
+async def get_dow30(
+    comp_graph_service: CompGraphService = Provide[
+        ApplicationContainer.comp_graph_bp.comp_graph_svc
+    ],
+):
+    result = await comp_graph_service.get_dow30()
+
+    return result.dict()
+
+@comp_graph_controller.get("/api/comp/sp500")
+@inject
+async def get_sp500(
+    comp_graph_service: CompGraphService = Provide[
+        ApplicationContainer.comp_graph_bp.comp_graph_svc
+    ],
+):
+    result = await comp_graph_service.get_sp500()
+
+    return result.dict()
+
+@comp_graph_controller.get("/api/comp/sample")
+@inject
+async def get_sample(
+    comp_graph_service: CompGraphService = Provide[
+        ApplicationContainer.comp_graph_bp.comp_graph_svc
+    ],
+):
+    result = await comp_graph_service.get_sample()
+    return result.dict()
+
 @comp_graph_controller.get("/api/comp/surrounding")
 @validate_querystring(GetSurroundingByNodeRequest)
 @inject
@@ -34,13 +66,4 @@ async def get_surrounding_by_node(
 
     result = await comp_graph_service.get_surrounding_by_node(node_id, expand_number_of_layers)
 
-    return result.dict()
-
-@comp_graph_controller.get("/api/comp/sample")
-async def get_sample(
-    comp_graph_service: CompGraphService = Provide[
-        ApplicationContainer.comp_graph_bp.comp_graph_svc
-    ],
-):
-    result = await comp_graph_service.get_sample()
     return result.dict()
