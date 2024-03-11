@@ -38,7 +38,6 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
         cypher_query = '''MATCH (a)-[b]->(c)
                           WHERE a.graph="dow30"
                           RETURN a, b.id AS id, b.category AS category, startNode(b).id AS source, endNode(b).id AS target'''
-        print(cypher_query)
 
         g = Graph(nodes=[], links=[])
 
@@ -46,25 +45,20 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
             results = session.read_transaction(
                 lambda tx, cypher_query=cypher_query: tx.run(cypher_query).data())
             for record in results:
-                print(record)
                 # Append nodes
                 node = record['a']
                 g.nodes.append(Entity(id=node['id'], name=node['name']))
                 # Append links
-                # print(record['r'])
-                
                 g.links.append(EntityRelation(id=record["id"], category=record["category"], 
                                                 source=record["source"], target=record["target"]))
 
             self.driver.close()
-        print(g)
         return g
     
     def get_sp500(self) -> Graph:
         cypher_query = '''MATCH (a)-[b]->(c)
                           WHERE a.graph="sp500"
                           RETURN a, b.id AS id, b.category AS category, startNode(b).id AS source, endNode(b).id AS target'''
-        print(cypher_query)
 
         g = Graph(nodes=[], links=[])
 
@@ -72,18 +66,14 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
             results = session.read_transaction(
                 lambda tx, cypher_query=cypher_query: tx.run(cypher_query).data())
             for record in results:
-                print(record)
                 # Append nodes
                 node = record['a']
                 g.nodes.append(Entity(id=node['id'], name=node['name']))
                 # Append links
-                # print(record['r'])
-                
                 g.links.append(EntityRelation(id=record["id"], category=record["category"], 
                                                 source=record["source"], target=record["target"]))
 
             self.driver.close()
-        print(g)
         return g
 
     def get_surrounding_node_by_center(self, center_node, dist_to_center) -> Graph:
@@ -93,7 +83,6 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
         cypher_query = '''MATCH p=(a:Node {{id:\"{}\"}})-[*..{}]->(b:Node)
                           WITH [r IN relationships(p) | [startNode(r), properties(r), endNode(r)]] AS p, b
                           RETURN p, b'''.format(center_node, dist_to_center)
-        print(cypher_query)
 
         g = Graph(nodes=[Entity(id=center_node, name=self.entity_map[center_node])], links=[])
 
@@ -101,7 +90,6 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
             results = session.read_transaction(
                 lambda tx, cypher_query=cypher_query: tx.run(cypher_query).data())
             for record in results:
-                print(record)
                 # Append nodes
                 neighbor = record['b']
                 g.nodes.append(Entity(id=neighbor['id'], name=neighbor['name']))
@@ -113,7 +101,6 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
                                                    source=property[0]["id"], target=property[2]["id"]))
 
             self.driver.close()
-        print(g)
         return g
     
     def get_sample_graph(self) -> Graph:
@@ -136,21 +123,18 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
                           YIELD path
                           RETURN nodes(path) AS nodesInPath, relationships(path) AS relationshipsInPath'''
         
-        print(cypher_query)
         g = Graph(nodes=[], links=[])
 
         with self.driver.session(database="neo4j") as session:
             results = session.read_transaction(
                 lambda tx, cypher_query=cypher_query: tx.run(cypher_query).data())
             for record in results:
-                print(record)
                 # Append nodes
                 for node in record['nodesInPath']:
                     g.nodes.append(Entity(id=node['id'], name=node['name']))
                 
                 # Append links
                 for link in record['relationshipsInPath']:
-                    print(link)
                     g.links.append(EntityRelation(id=0, category="null", source=link[0]["id"], target=link[2]["id"]))
 
             self.driver.close()
