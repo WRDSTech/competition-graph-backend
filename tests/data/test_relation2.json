@@ -1,0 +1,42 @@
+{
+  "0": {
+    "entity_1": "HWM-P",
+    "entity_2": "ATI",
+    "relation": "competition"
+  },
+  "1": {
+    "entity_1": "AAPL",
+    "entity_2": "Apple Music",
+    "relation": "product"
+  },
+  "2": {
+    "entity_1": "VZ",
+    "entity_2": "Disney",
+    "relation": "unknown"
+  },
+  "3": {
+    "entity_1": "VZ",
+    "entity_2": "AAPL",
+    "relation": "competition"
+  },
+  "4": {
+    "entity_1": "AXP",
+    "entity_2": "Standard Chartered Bank",
+    "relation": "unknown"
+  },
+  "5": {
+    "entity_1": "HWM-P",
+    "entity_2": "ATI",
+    "relation": "unknown"
+  },
+  "6": {
+    "entity_1": "AXP",
+    "entity_2": "Standard Chartered Bank",
+    "relation": "competition"
+  },
+  "7": {
+    "entity_1": "AXP",
+    "entity_2": "MSFT",
+    "relation": "competition"
+  }
+}

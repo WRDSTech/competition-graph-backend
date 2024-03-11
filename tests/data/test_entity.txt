@@ -1,0 +1,10 @@
+9
+340B     1 
+5G     2 
+5NIKE     3 
+AAPL     4 
+AB InBev     5 
+ABB     6 
+ACER     7 
+ADBE     8 
+AGN.2     9 

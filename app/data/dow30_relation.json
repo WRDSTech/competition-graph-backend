@@ -1,0 +1,1627 @@
+{
+    "0": {
+        "entity_1": "AXP",
+        "entity_2": "Global Consumer Services Group",
+        "relation": "unknown"
+    },
+    "1": {
+        "entity_1": "AXP",
+        "entity_2": "Global Network",
+        "relation": "unknown"
+    },
+    "2": {
+        "entity_1": "AXP",
+        "entity_2": "Human Resources, Marketing and Communications",
+        "relation": "unknown"
+    },
+    "3": {
+        "entity_1": "AXP",
+        "entity_2": "Global Travel and Lifestyle Services",
+        "relation": "unknown"
+    },
+    "4": {
+        "entity_1": "AXP",
+        "entity_2": "Standard Chartered Bank",
+        "relation": "unknown"
+    },
+    "5": {
+        "entity_1": "AXP",
+        "entity_2": "Global Services Group",
+        "relation": "unknown"
+    },
+    "6": {
+        "entity_1": "AXP",
+        "entity_2": "META",
+        "relation": "competition"
+    },
+    "7": {
+        "entity_1": "AXP",
+        "entity_2": "PayPal",
+        "relation": "unknown"
+    },
+    "8": {
+        "entity_1": "AXP",
+        "entity_2": "SQ",
+        "relation": "competition"
+    },
+    "9": {
+        "entity_1": "AXP",
+        "entity_2": "AMZN",
+        "relation": "competition"
+    },
+    "10": {
+        "entity_1": "AXP",
+        "entity_2": "TRS",
+        "relation": "unknown"
+    },
+    "11": {
+        "entity_1": "AXP",
+        "entity_2": "PA.5",
+        "relation": "competition"
+    },
+    "12": {
+        "entity_1": "AXP",
+        "entity_2": "CRAI",
+        "relation": "competition"
+    },
+    "13": {
+        "entity_1": "AXP",
+        "entity_2": "OCC",
+        "relation": "competition"
+    },
+    "14": {
+        "entity_1": "AXP",
+        "entity_2": "CCAR",
+        "relation": "competition"
+    },
+    "15": {
+        "entity_1": "AXP",
+        "entity_2": "TRS",
+        "relation": "competition"
+    },
+    "16": {
+        "entity_1": "AXP",
+        "entity_2": "RCAP.1",
+        "relation": "competition"
+    },
+    "17": {
+        "entity_1": "AXP",
+        "entity_2": "EU",
+        "relation": "competition"
+    },
+    "18": {
+        "entity_1": "AXP",
+        "entity_2": "ABAT",
+        "relation": "competition"
+    },
+    "19": {
+        "entity_1": "AXP",
+        "entity_2": "FCPA",
+        "relation": "unknown"
+    },
+    "20": {
+        "entity_1": "AXP",
+        "entity_2": "FCPA",
+        "relation": "unknown"
+    },
+    "21": {
+        "entity_1": "AXP",
+        "entity_2": "SEC",
+        "relation": "competition"
+    },
+    "22": {
+        "entity_1": "AXP",
+        "entity_2": "DOUGLAS E. BUCKMINSTER \u2014. Group",
+        "relation": "unknown"
+    },
+    "23": {
+        "entity_1": "AXP",
+        "entity_2": "MARC D. GORDON",
+        "relation": "unknown"
+    },
+    "24": {
+        "entity_1": "AXP",
+        "entity_2": "Regional CEO",
+        "relation": "unknown"
+    },
+    "25": {
+        "entity_1": "AXP",
+        "entity_2": "Commercial and Private Banking",
+        "relation": "unknown"
+    },
+    "26": {
+        "entity_1": "AXP",
+        "entity_2": "Group Head",
+        "relation": "unknown"
+    },
+    "27": {
+        "entity_1": "AXP",
+        "entity_2": "Strategy and Corporate Development",
+        "relation": "unknown"
+    },
+    "28": {
+        "entity_1": "AXP",
+        "entity_2": "the We Company",
+        "relation": "unknown"
+    },
+    "29": {
+        "entity_1": "AXP",
+        "entity_2": "ANRE\u0301 WILLIAMS \u2014. Group",
+        "relation": "unknown"
+    },
+    "30": {
+        "entity_1": "AXP",
+        "entity_2": "Loyalty",
+        "relation": "unknown"
+    },
+    "31": {
+        "entity_1": "AXP",
+        "entity_2": "China UnionPay",
+        "relation": "unknown"
+    },
+    "32": {
+        "entity_1": "AXP",
+        "entity_2": "Visa",
+        "relation": "unknown"
+    },
+    "33": {
+        "entity_1": "AXP",
+        "entity_2": "Discover",
+        "relation": "unknown"
+    },
+    "34": {
+        "entity_1": "AXP",
+        "entity_2": "the Federal Reserve",
+        "relation": "unknown"
+    },
+    "35": {
+        "entity_1": "AXP",
+        "entity_2": "the Office of the Comptroller of the Currency",
+        "relation": "unknown"
+    },
+    "36": {
+        "entity_1": "AXP",
+        "entity_2": "the Consumer Financial Protection Bureau",
+        "relation": "unknown"
+    },
+    "37": {
+        "entity_1": "AXP",
+        "entity_2": "The Federal Reserve",
+        "relation": "unknown"
+    },
+    "38": {
+        "entity_1": "AXP",
+        "entity_2": "Category IV",
+        "relation": "unknown"
+    },
+    "39": {
+        "entity_1": "AXP",
+        "entity_2": "LCR",
+        "relation": "unknown"
+    },
+    "40": {
+        "entity_1": "AXP",
+        "entity_2": "the Comprehensive Capital Analysis and Review",
+        "relation": "unknown"
+    },
+    "41": {
+        "entity_1": "AXP",
+        "entity_2": "the Basel Committee on Banking Supervision",
+        "relation": "unknown"
+    },
+    "42": {
+        "entity_1": "AXP",
+        "entity_2": "the Basel Committee",
+        "relation": "unknown"
+    },
+    "43": {
+        "entity_1": "AXP",
+        "entity_2": "CET1",
+        "relation": "unknown"
+    },
+    "44": {
+        "entity_1": "AXP",
+        "entity_2": "the Orderly Liquidation Authority",
+        "relation": "unknown"
+    },
+    "45": {
+        "entity_1": "AXP",
+        "entity_2": "Treasury",
+        "relation": "unknown"
+    },
+    "46": {
+        "entity_1": "AXP",
+        "entity_2": "Community Reinvestment ActAENB",
+        "relation": "unknown"
+    },
+    "47": {
+        "entity_1": "AXP",
+        "entity_2": "the European Union",
+        "relation": "unknown"
+    },
+    "48": {
+        "entity_1": "AXP",
+        "entity_2": "the European Commission",
+        "relation": "unknown"
+    },
+    "49": {
+        "entity_1": "AXP",
+        "entity_2": "the Reserve Bank of India",
+        "relation": "unknown"
+    },
+    "50": {
+        "entity_1": "AXP",
+        "entity_2": "The People\u2019s Bank of China",
+        "relation": "unknown"
+    },
+    "51": {
+        "entity_1": "AXP",
+        "entity_2": "Cyber SecurityRegulatory",
+        "relation": "unknown"
+    },
+    "52": {
+        "entity_1": "AXP",
+        "entity_2": "The European Central Bank",
+        "relation": "unknown"
+    },
+    "53": {
+        "entity_1": "AXP",
+        "entity_2": "the European Banking Authority",
+        "relation": "unknown"
+    },
+    "54": {
+        "entity_1": "AXP",
+        "entity_2": "Member States",
+        "relation": "unknown"
+    },
+    "55": {
+        "entity_1": "AXP",
+        "entity_2": "the U.S. Department of the Treasury",
+        "relation": "unknown"
+    },
+    "56": {
+        "entity_1": "AXP",
+        "entity_2": "Specially Designated Nationals",
+        "relation": "unknown"
+    },
+    "57": {
+        "entity_1": "AXP",
+        "entity_2": "Executive Orders",
+        "relation": "unknown"
+    },
+    "58": {
+        "entity_1": "AXP",
+        "entity_2": "the Government of Iran",
+        "relation": "unknown"
+    },
+    "59": {
+        "entity_1": "AXP",
+        "entity_2": "the Securities and Exchange Commission",
+        "relation": "unknown"
+    },
+    "60": {
+        "entity_1": "AXP",
+        "entity_2": "the Federal Housing Finance Agency",
+        "relation": "unknown"
+    },
+    "61": {
+        "entity_1": "AXP",
+        "entity_2": "the National Credit Union Administration",
+        "relation": "unknown"
+    },
+    "62": {
+        "entity_1": "BA",
+        "entity_2": "Airbus",
+        "relation": "unknown"
+    },
+    "63": {
+        "entity_1": "BA",
+        "entity_2": "BDS",
+        "relation": "unknown"
+    },
+    "64": {
+        "entity_1": "BA",
+        "entity_2": "LMT",
+        "relation": "competition"
+    },
+    "65": {
+        "entity_1": "BA",
+        "entity_2": "NOC",
+        "relation": "competition"
+    },
+    "66": {
+        "entity_1": "BA",
+        "entity_2": "RTN",
+        "relation": "competition"
+    },
+    "67": {
+        "entity_1": "BA",
+        "entity_2": "GD",
+        "relation": "competition"
+    },
+    "68": {
+        "entity_1": "BA",
+        "entity_2": "SpaceX",
+        "relation": "unknown"
+    },
+    "69": {
+        "entity_1": "BA",
+        "entity_2": "BAESY",
+        "relation": "competition"
+    },
+    "70": {
+        "entity_1": "BA",
+        "entity_2": "Airbus Group",
+        "relation": "unknown"
+    },
+    "71": {
+        "entity_1": "BA",
+        "entity_2": "BDS.1",
+        "relation": "competition"
+    },
+    "72": {
+        "entity_1": "BA",
+        "entity_2": "BCE",
+        "relation": "competition"
+    },
+    "73": {
+        "entity_1": "BA",
+        "entity_2": "BGS",
+        "relation": "competition"
+    },
+    "74": {
+        "entity_1": "CAT",
+        "entity_2": "Competitive Environment Caterpillar",
+        "relation": "unknown"
+    },
+    "75": {
+        "entity_1": "KO",
+        "entity_2": "PEP",
+        "relation": "competition"
+    },
+    "76": {
+        "entity_1": "KO",
+        "entity_2": "Nestle\u0301 S.A.",
+        "relation": "unknown"
+    },
+    "77": {
+        "entity_1": "KO",
+        "entity_2": "KDP",
+        "relation": "competition"
+    },
+    "78": {
+        "entity_1": "KO",
+        "entity_2": "UL",
+        "relation": "competition"
+    },
+    "79": {
+        "entity_1": "KO",
+        "entity_2": "Groupe Danone",
+        "relation": "unknown"
+    },
+    "80": {
+        "entity_1": "INTC",
+        "entity_2": "MBBYF",
+        "relation": "competition"
+    },
+    "81": {
+        "entity_1": "INTC",
+        "entity_2": "ADAS",
+        "relation": "unknown"
+    },
+    "82": {
+        "entity_1": "INTC",
+        "entity_2": "PSG.1",
+        "relation": "competition"
+    },
+    "83": {
+        "entity_1": "INTC",
+        "entity_2": "DCG",
+        "relation": "competition"
+    },
+    "84": {
+        "entity_1": "INTC",
+        "entity_2": "AMD",
+        "relation": "competition"
+    },
+    "85": {
+        "entity_1": "INTC",
+        "entity_2": "NVDA",
+        "relation": "competition"
+    },
+    "86": {
+        "entity_1": "INTC",
+        "entity_2": "CSCO",
+        "relation": "competition"
+    },
+    "87": {
+        "entity_1": "INTC",
+        "entity_2": "RSS",
+        "relation": "unknown"
+    },
+    "88": {
+        "entity_1": "INTC",
+        "entity_2": "QLC",
+        "relation": "competition"
+    },
+    "89": {
+        "entity_1": "INTC",
+        "entity_2": "NSG",
+        "relation": "unknown"
+    },
+    "90": {
+        "entity_1": "INTC",
+        "entity_2": "TAM",
+        "relation": "competition"
+    },
+    "91": {
+        "entity_1": "INTC",
+        "entity_2": "QCOM",
+        "relation": "competition"
+    },
+    "92": {
+        "entity_1": "INTC",
+        "entity_2": "MD&A. MD&A",
+        "relation": "unknown"
+    },
+    "93": {
+        "entity_1": "INTC",
+        "entity_2": "OEMs",
+        "relation": "unknown"
+    },
+    "94": {
+        "entity_1": "INTC",
+        "entity_2": "AI",
+        "relation": "unknown"
+    },
+    "95": {
+        "entity_1": "INTC",
+        "entity_2": "the Internet of Things",
+        "relation": "unknown"
+    },
+    "96": {
+        "entity_1": "INTC",
+        "entity_2": "Bluetooth\u00ae",
+        "relation": "product"
+    },
+    "97": {
+        "entity_1": "INTC",
+        "entity_2": "EyeQ*5",
+        "relation": "unknown"
+    },
+    "98": {
+        "entity_1": "INTC",
+        "entity_2": "OEM",
+        "relation": "unknown"
+    },
+    "99": {
+        "entity_1": "PG",
+        "entity_2": "Procter & Gamble",
+        "relation": "unknown"
+    },
+    "100": {
+        "entity_1": "TRV",
+        "entity_2": "National Accounts",
+        "relation": "unknown"
+    },
+    "101": {
+        "entity_1": "TRV",
+        "entity_2": "National Property and Other",
+        "relation": "unknown"
+    },
+    "102": {
+        "entity_1": "TRV",
+        "entity_2": "Select Accounts",
+        "relation": "unknown"
+    },
+    "103": {
+        "entity_1": "TRV",
+        "entity_2": "Middle Market",
+        "relation": "unknown"
+    },
+    "104": {
+        "entity_1": "TRV",
+        "entity_2": "Lloyd\u2019s, International",
+        "relation": "unknown"
+    },
+    "105": {
+        "entity_1": "TRV",
+        "entity_2": "Lloyd",
+        "relation": "unknown"
+    },
+    "106": {
+        "entity_1": "TRV",
+        "entity_2": "CompetitionDomesticAlthough",
+        "relation": "unknown"
+    },
+    "107": {
+        "entity_1": "WMT",
+        "entity_2": "EDLC",
+        "relation": "unknown"
+    },
+    "108": {
+        "entity_1": "WMT",
+        "entity_2": "COST",
+        "relation": "competition"
+    },
+    "109": {
+        "entity_1": "WMT",
+        "entity_2": "Delivery Unlimited",
+        "relation": "unknown"
+    },
+    "110": {
+        "entity_1": "WMT",
+        "entity_2": "Sam's Club",
+        "relation": "unknown"
+    },
+    "111": {
+        "entity_1": "WMT",
+        "entity_2": "eCommerce",
+        "relation": "unknown"
+    },
+    "112": {
+        "entity_1": "MRK",
+        "entity_2": "Health Care Environment",
+        "relation": "unknown"
+    },
+    "113": {
+        "entity_1": "MRK",
+        "entity_2": "Medicaid",
+        "relation": "unknown"
+    },
+    "114": {
+        "entity_1": "MRK",
+        "entity_2": "CMS",
+        "relation": "competition"
+    },
+    "115": {
+        "entity_1": "MRK",
+        "entity_2": "FLYIQ",
+        "relation": "competition"
+    },
+    "116": {
+        "entity_1": "MRK",
+        "entity_2": "INCY",
+        "relation": "competition"
+    },
+    "117": {
+        "entity_1": "MRK",
+        "entity_2": "HTA",
+        "relation": "competition"
+    },
+    "118": {
+        "entity_1": "MRK",
+        "entity_2": "EU",
+        "relation": "competition"
+    },
+    "119": {
+        "entity_1": "MRK",
+        "entity_2": "Government RegulationGlobal",
+        "relation": "unknown"
+    },
+    "120": {
+        "entity_1": "MRK",
+        "entity_2": "340B",
+        "relation": "unknown"
+    },
+    "121": {
+        "entity_1": "MRK",
+        "entity_2": "Medicare",
+        "relation": "unknown"
+    },
+    "122": {
+        "entity_1": "MRK",
+        "entity_2": "Selling",
+        "relation": "unknown"
+    },
+    "123": {
+        "entity_1": "MRK",
+        "entity_2": "the Centers for Medicare & Medicaid Services",
+        "relation": "unknown"
+    },
+    "124": {
+        "entity_1": "MRK",
+        "entity_2": "Average Manufacturer Price",
+        "relation": "unknown"
+    },
+    "125": {
+        "entity_1": "MRK",
+        "entity_2": "Best Price",
+        "relation": "unknown"
+    },
+    "126": {
+        "entity_1": "MRK",
+        "entity_2": "the U.S. Territories",
+        "relation": "unknown"
+    },
+    "127": {
+        "entity_1": "MRK",
+        "entity_2": "the Medicaid Drug Rebate Program",
+        "relation": "unknown"
+    },
+    "128": {
+        "entity_1": "MRK",
+        "entity_2": "Congress",
+        "relation": "unknown"
+    },
+    "129": {
+        "entity_1": "MRK",
+        "entity_2": "the National Reimbursement Drug List",
+        "relation": "unknown"
+    },
+    "130": {
+        "entity_1": "MRK",
+        "entity_2": "European Union",
+        "relation": "unknown"
+    },
+    "131": {
+        "entity_1": "MRK",
+        "entity_2": "Member States",
+        "relation": "unknown"
+    },
+    "132": {
+        "entity_1": "MRK",
+        "entity_2": "Research and Development",
+        "relation": "unknown"
+    },
+    "133": {
+        "entity_1": "MRK",
+        "entity_2": "The Merck Patient Assistance Program",
+        "relation": "unknown"
+    },
+    "134": {
+        "entity_1": "MRK",
+        "entity_2": "the Merck Foundation",
+        "relation": "unknown"
+    },
+    "135": {
+        "entity_1": "AMGN",
+        "entity_2": "ENBREL. U.S. & Canada",
+        "relation": "unknown"
+    },
+    "136": {
+        "entity_1": "AMGN",
+        "entity_2": "CNTO.",
+        "relation": "competition"
+    },
+    "137": {
+        "entity_1": "AMGN",
+        "entity_2": "ABBV",
+        "relation": "competition"
+    },
+    "138": {
+        "entity_1": "AMGN",
+        "entity_2": "CHRS",
+        "relation": "competition"
+    },
+    "139": {
+        "entity_1": "AMGN",
+        "entity_2": "Roche",
+        "relation": "unknown"
+    },
+    "140": {
+        "entity_1": "AMGN",
+        "entity_2": "MLNM",
+        "relation": "competition"
+    },
+    "141": {
+        "entity_1": "AMGN",
+        "entity_2": "CELG",
+        "relation": "competition"
+    },
+    "142": {
+        "entity_1": "AMGN",
+        "entity_2": "NVS",
+        "relation": "competition"
+    },
+    "143": {
+        "entity_1": "AMGN",
+        "entity_2": "JNJ",
+        "relation": "competition"
+    },
+    "144": {
+        "entity_1": "AMGN",
+        "entity_2": "PFE",
+        "relation": "competition"
+    },
+    "145": {
+        "entity_1": "AMGN",
+        "entity_2": "TAK",
+        "relation": "competition"
+    },
+    "146": {
+        "entity_1": "AMGN",
+        "entity_2": "BMY",
+        "relation": "competition"
+    },
+    "147": {
+        "entity_1": "AMGN",
+        "entity_2": "BMS",
+        "relation": "competition"
+    },
+    "148": {
+        "entity_1": "AMGN",
+        "entity_2": "EU",
+        "relation": "competition"
+    },
+    "149": {
+        "entity_1": "AMGN",
+        "entity_2": "AGN.2",
+        "relation": "competition"
+    },
+    "150": {
+        "entity_1": "AMGN",
+        "entity_2": "Janssen",
+        "relation": "unknown"
+    },
+    "151": {
+        "entity_1": "AMGN",
+        "entity_2": "HUMIRA\u00ae.",
+        "relation": "unknown"
+    },
+    "152": {
+        "entity_1": "AMGN",
+        "entity_2": "Neulasta",
+        "relation": "unknown"
+    },
+    "153": {
+        "entity_1": "AMGN",
+        "entity_2": "U.S. Fulphila\u00ae",
+        "relation": "product"
+    },
+    "154": {
+        "entity_1": "AMGN",
+        "entity_2": "Aranesp\u00ae. U.S. PROCRIT",
+        "relation": "unknown"
+    },
+    "155": {
+        "entity_1": "AMGN",
+        "entity_2": "U.S. MIRCERA\u00ae",
+        "relation": "product"
+    },
+    "156": {
+        "entity_1": "AMGN",
+        "entity_2": "U.S. RETACRITTM. Hospira",
+        "relation": "unknown"
+    },
+    "157": {
+        "entity_1": "AMGN",
+        "entity_2": "U.S. NINLARO\u00ae",
+        "relation": "product"
+    },
+    "158": {
+        "entity_1": "AMGN",
+        "entity_2": "REVLIMID\u00ae. Celgene",
+        "relation": "unknown"
+    },
+    "159": {
+        "entity_1": "AMGN",
+        "entity_2": "U.S. DARZALEX\u00ae. Janssen",
+        "relation": "unknown"
+    },
+    "160": {
+        "entity_1": "AMGN",
+        "entity_2": "J&J",
+        "relation": "unknown"
+    },
+    "161": {
+        "entity_1": "AMGN",
+        "entity_2": "Aranesp\u00ae",
+        "relation": "product"
+    },
+    "162": {
+        "entity_1": "AMGN",
+        "entity_2": "MIRCERA\u00ae",
+        "relation": "product"
+    },
+    "163": {
+        "entity_1": "AMGN",
+        "entity_2": "Sensipar\u00ae",
+        "relation": "product"
+    },
+    "164": {
+        "entity_1": "AMGN",
+        "entity_2": "the Consolidated Financial Statements",
+        "relation": "unknown"
+    },
+    "165": {
+        "entity_1": "AMGN",
+        "entity_2": "KYPROLIS\u00ae",
+        "relation": "product"
+    },
+    "166": {
+        "entity_1": "AMGN",
+        "entity_2": "The Enbrel Mini\u00ae",
+        "relation": "product"
+    },
+    "167": {
+        "entity_1": "AMGN",
+        "entity_2": "the European Union",
+        "relation": "unknown"
+    },
+    "168": {
+        "entity_1": "AMGN",
+        "entity_2": "Neulasta\u00ae",
+        "relation": "product"
+    },
+    "169": {
+        "entity_1": "AMGN",
+        "entity_2": "Avastin\u00ae",
+        "relation": "product"
+    },
+    "170": {
+        "entity_1": "AMGN",
+        "entity_2": "Herceptin\u00ae",
+        "relation": "product"
+    },
+    "171": {
+        "entity_1": "NKE",
+        "entity_2": "Anta",
+        "relation": "unknown"
+    },
+    "172": {
+        "entity_1": "NKE",
+        "entity_2": "ASICS",
+        "relation": "unknown"
+    },
+    "173": {
+        "entity_1": "NKE",
+        "entity_2": "SYNC.1",
+        "relation": "competition"
+    },
+    "174": {
+        "entity_1": "NKE",
+        "entity_2": "VFC",
+        "relation": "competition"
+    },
+    "175": {
+        "entity_1": "NKE",
+        "entity_2": "Li Ning",
+        "relation": "unknown"
+    },
+    "176": {
+        "entity_1": "NKE",
+        "entity_2": "Under Armour",
+        "relation": "unknown"
+    },
+    "177": {
+        "entity_1": "AAPL",
+        "entity_2": "Mac",
+        "relation": "unknown"
+    },
+    "178": {
+        "entity_1": "AAPL",
+        "entity_2": "Research and DevelopmentBecause",
+        "relation": "unknown"
+    },
+    "179": {
+        "entity_1": "HD",
+        "entity_2": "One Supply Chain",
+        "relation": "unknown"
+    },
+    "180": {
+        "entity_1": "UNH",
+        "entity_2": "UnitedHealthcare",
+        "relation": "unknown"
+    },
+    "181": {
+        "entity_1": "UNH",
+        "entity_2": "Optum",
+        "relation": "unknown"
+    },
+    "182": {
+        "entity_1": "UNH",
+        "entity_2": "Fortune 50",
+        "relation": "unknown"
+    },
+    "183": {
+        "entity_1": "UNH",
+        "entity_2": "10INTELLECTUAL PROPERTY RIGHTSWe",
+        "relation": "unknown"
+    },
+    "184": {
+        "entity_1": "UNH",
+        "entity_2": "the UnitedHealth Group",
+        "relation": "unknown"
+    },
+    "185": {
+        "entity_1": "VZ",
+        "entity_2": "T",
+        "relation": "competition"
+    },
+    "186": {
+        "entity_1": "VZ",
+        "entity_2": "S.4",
+        "relation": "competition"
+    },
+    "187": {
+        "entity_1": "VZ",
+        "entity_2": "T-Mobile USA, Inc.",
+        "relation": "unknown"
+    },
+    "188": {
+        "entity_1": "VZ",
+        "entity_2": "Apple Music",
+        "relation": "unknown"
+    },
+    "189": {
+        "entity_1": "VZ",
+        "entity_2": "Disney",
+        "relation": "unknown"
+    },
+    "190": {
+        "entity_1": "VZ",
+        "entity_2": "MSFT",
+        "relation": "competition"
+    },
+    "191": {
+        "entity_1": "VZ",
+        "entity_2": "GOOGL",
+        "relation": "competition"
+    },
+    "192": {
+        "entity_1": "VZ",
+        "entity_2": "AAPL",
+        "relation": "competition"
+    },
+    "193": {
+        "entity_1": "VZ",
+        "entity_2": "OTEL",
+        "relation": "competition"
+    },
+    "194": {
+        "entity_1": "VZ",
+        "entity_2": "FTCFQ",
+        "relation": "competition"
+    },
+    "195": {
+        "entity_1": "VZ",
+        "entity_2": "Consumer",
+        "relation": "unknown"
+    },
+    "196": {
+        "entity_1": "VZ",
+        "entity_2": "Business",
+        "relation": "unknown"
+    },
+    "197": {
+        "entity_1": "VZ",
+        "entity_2": "Small and Medium Business",
+        "relation": "unknown"
+    },
+    "198": {
+        "entity_1": "VZ",
+        "entity_2": "the Global Enterprise",
+        "relation": "unknown"
+    },
+    "199": {
+        "entity_1": "VZ",
+        "entity_2": "Competitive TrendsRegulatory and Competitive LandscapeVerizon",
+        "relation": "unknown"
+    },
+    "200": {
+        "entity_1": "VZ",
+        "entity_2": "FCC",
+        "relation": "unknown"
+    },
+    "201": {
+        "entity_1": "VZ",
+        "entity_2": "State",
+        "relation": "unknown"
+    },
+    "202": {
+        "entity_1": "VZ",
+        "entity_2": "Local RegulationWireless ServicesThe",
+        "relation": "unknown"
+    },
+    "203": {
+        "entity_1": "VZ",
+        "entity_2": "the U.S. Court of Appeals for the D.C. Circuit",
+        "relation": "unknown"
+    },
+    "204": {
+        "entity_1": "VZ",
+        "entity_2": "http:\/\/responsibility.verizon.com\/broadband-commitment.Wireline VoiceVerizon",
+        "relation": "unknown"
+    },
+    "205": {
+        "entity_1": "VZ",
+        "entity_2": "IoT",
+        "relation": "unknown"
+    },
+    "206": {
+        "entity_1": "VZ",
+        "entity_2": "the Federal Trade Commission",
+        "relation": "unknown"
+    },
+    "207": {
+        "entity_1": "VZ",
+        "entity_2": "Public Safety",
+        "relation": "unknown"
+    },
+    "208": {
+        "entity_1": "VZ",
+        "entity_2": "Intercarrier Compensation and Network",
+        "relation": "unknown"
+    },
+    "209": {
+        "entity_1": "HON",
+        "entity_2": "GRMN",
+        "relation": "competition"
+    },
+    "210": {
+        "entity_1": "HON",
+        "entity_2": "THLEY",
+        "relation": "competition"
+    },
+    "211": {
+        "entity_1": "HON",
+        "entity_2": "RTX",
+        "relation": "competition"
+    },
+    "212": {
+        "entity_1": "HON",
+        "entity_2": "Honeywell Building Technologies",
+        "relation": "unknown"
+    },
+    "213": {
+        "entity_1": "HON",
+        "entity_2": "Johnson Controls",
+        "relation": "unknown"
+    },
+    "214": {
+        "entity_1": "HON",
+        "entity_2": "Schneider Electric",
+        "relation": "unknown"
+    },
+    "215": {
+        "entity_1": "HON",
+        "entity_2": "Siemens",
+        "relation": "unknown"
+    },
+    "216": {
+        "entity_1": "HON",
+        "entity_2": "Performance Materials and Technologies: Albemarle",
+        "relation": "unknown"
+    },
+    "217": {
+        "entity_1": "HON",
+        "entity_2": "EMR",
+        "relation": "competition"
+    },
+    "218": {
+        "entity_1": "HON",
+        "entity_2": "MXP.",
+        "relation": "competition"
+    },
+    "219": {
+        "entity_1": "HON",
+        "entity_2": "TEL",
+        "relation": "competition"
+    },
+    "220": {
+        "entity_1": "HON",
+        "entity_2": "ZBRA",
+        "relation": "competition"
+    },
+    "221": {
+        "entity_1": "HON",
+        "entity_2": "Safran",
+        "relation": "unknown"
+    },
+    "222": {
+        "entity_1": "HON",
+        "entity_2": "Safety and Productivity Solutions: 3M",
+        "relation": "unknown"
+    },
+    "223": {
+        "entity_1": "HON",
+        "entity_2": "OEMs",
+        "relation": "unknown"
+    },
+    "224": {
+        "entity_1": "HON",
+        "entity_2": "the U.S. Government",
+        "relation": "unknown"
+    },
+    "225": {
+        "entity_1": "HON",
+        "entity_2": "Aerospace)",
+        "relation": "unknown"
+    },
+    "226": {
+        "entity_1": "CSCO",
+        "entity_2": "Amazon Web Services LLC",
+        "relation": "unknown"
+    },
+    "227": {
+        "entity_1": "CSCO",
+        "entity_2": "ANET",
+        "relation": "competition"
+    },
+    "228": {
+        "entity_1": "CSCO",
+        "entity_2": "BRCM",
+        "relation": "competition"
+    },
+    "229": {
+        "entity_1": "CSCO",
+        "entity_2": "COMM",
+        "relation": "competition"
+    },
+    "230": {
+        "entity_1": "CSCO",
+        "entity_2": "CHKP",
+        "relation": "competition"
+    },
+    "231": {
+        "entity_1": "CSCO",
+        "entity_2": "DELL",
+        "relation": "competition"
+    },
+    "232": {
+        "entity_1": "CSCO",
+        "entity_2": "DT",
+        "relation": "competition"
+    },
+    "233": {
+        "entity_1": "CSCO",
+        "entity_2": "FFIV",
+        "relation": "competition"
+    },
+    "234": {
+        "entity_1": "CSCO",
+        "entity_2": "MNDT",
+        "relation": "competition"
+    },
+    "235": {
+        "entity_1": "CSCO",
+        "entity_2": "FTNT",
+        "relation": "competition"
+    },
+    "236": {
+        "entity_1": "CSCO",
+        "entity_2": "Huawei Technologies Co., Ltd.",
+        "relation": "unknown"
+    },
+    "237": {
+        "entity_1": "CSCO",
+        "entity_2": "JNPR",
+        "relation": "competition"
+    },
+    "238": {
+        "entity_1": "CSCO",
+        "entity_2": "LOGM",
+        "relation": "competition"
+    },
+    "239": {
+        "entity_1": "CSCO",
+        "entity_2": "MSFT",
+        "relation": "competition"
+    },
+    "240": {
+        "entity_1": "CSCO",
+        "entity_2": "NEWR",
+        "relation": "competition"
+    },
+    "241": {
+        "entity_1": "CSCO",
+        "entity_2": "NOK",
+        "relation": "competition"
+    },
+    "242": {
+        "entity_1": "CSCO",
+        "entity_2": "NTNX",
+        "relation": "competition"
+    },
+    "243": {
+        "entity_1": "CSCO",
+        "entity_2": "PANW",
+        "relation": "competition"
+    },
+    "244": {
+        "entity_1": "CSCO",
+        "entity_2": "RNG",
+        "relation": "competition"
+    },
+    "245": {
+        "entity_1": "CSCO",
+        "entity_2": "WORK",
+        "relation": "competition"
+    },
+    "246": {
+        "entity_1": "CSCO",
+        "entity_2": "UI",
+        "relation": "competition"
+    },
+    "247": {
+        "entity_1": "CSCO",
+        "entity_2": "VMW",
+        "relation": "competition"
+    },
+    "248": {
+        "entity_1": "CSCO",
+        "entity_2": "ZM",
+        "relation": "competition"
+    },
+    "249": {
+        "entity_1": "CSCO",
+        "entity_2": "ZS",
+        "relation": "competition"
+    },
+    "250": {
+        "entity_1": "CSCO",
+        "entity_2": "DevelopmentWe",
+        "relation": "unknown"
+    },
+    "251": {
+        "entity_1": "CSCO",
+        "entity_2": "Security",
+        "relation": "unknown"
+    },
+    "252": {
+        "entity_1": "CRM",
+        "entity_2": "API",
+        "relation": "unknown"
+    },
+    "253": {
+        "entity_1": "V",
+        "entity_2": "Mastercard",
+        "relation": "unknown"
+    },
+    "254": {
+        "entity_1": "V",
+        "entity_2": "AXP",
+        "relation": "competition"
+    },
+    "255": {
+        "entity_1": "V",
+        "entity_2": "STAR",
+        "relation": "competition"
+    },
+    "256": {
+        "entity_1": "V",
+        "entity_2": "Interac",
+        "relation": "unknown"
+    },
+    "257": {
+        "entity_1": "V",
+        "entity_2": "ACH",
+        "relation": "unknown"
+    },
+    "258": {
+        "entity_1": "V",
+        "entity_2": "ACHHY",
+        "relation": "competition"
+    },
+    "259": {
+        "entity_1": "V",
+        "entity_2": "Diners Club",
+        "relation": "unknown"
+    },
+    "260": {
+        "entity_1": "V",
+        "entity_2": "Visa",
+        "relation": "unknown"
+    },
+    "261": {
+        "entity_1": "V",
+        "entity_2": "Global",
+        "relation": "unknown"
+    },
+    "262": {
+        "entity_1": "V",
+        "entity_2": "Discover",
+        "relation": "unknown"
+    },
+    "263": {
+        "entity_1": "V",
+        "entity_2": "Local and Regional Networks",
+        "relation": "unknown"
+    },
+    "264": {
+        "entity_1": "V",
+        "entity_2": "Pulse",
+        "relation": "unknown"
+    },
+    "265": {
+        "entity_1": "IBM",
+        "entity_2": "Cloud & Cognitive Software",
+        "relation": "unknown"
+    },
+    "266": {
+        "entity_1": "IBM",
+        "entity_2": "GOOGL",
+        "relation": "competition"
+    },
+    "267": {
+        "entity_1": "IBM",
+        "entity_2": "AMZN",
+        "relation": "competition"
+    },
+    "268": {
+        "entity_1": "IBM",
+        "entity_2": "BMMI",
+        "relation": "competition"
+    },
+    "269": {
+        "entity_1": "IBM",
+        "entity_2": "CSCO",
+        "relation": "competition"
+    },
+    "270": {
+        "entity_1": "IBM",
+        "entity_2": "MSFT",
+        "relation": "competition"
+    },
+    "271": {
+        "entity_1": "IBM",
+        "entity_2": "ORCL",
+        "relation": "competition"
+    },
+    "272": {
+        "entity_1": "IBM",
+        "entity_2": "Salesforce",
+        "relation": "unknown"
+    },
+    "273": {
+        "entity_1": "IBM",
+        "entity_2": "SAP",
+        "relation": "competition"
+    },
+    "274": {
+        "entity_1": "IBM",
+        "entity_2": "VMW",
+        "relation": "competition"
+    },
+    "275": {
+        "entity_1": "IBM",
+        "entity_2": "GBSF",
+        "relation": "competition"
+    },
+    "276": {
+        "entity_1": "IBM",
+        "entity_2": "GTS",
+        "relation": "competition"
+    },
+    "277": {
+        "entity_1": "IBM",
+        "entity_2": "GBS",
+        "relation": "unknown"
+    },
+    "278": {
+        "entity_1": "IBM",
+        "entity_2": "ACN",
+        "relation": "competition"
+    },
+    "279": {
+        "entity_1": "IBM",
+        "entity_2": "Capgemini",
+        "relation": "unknown"
+    },
+    "280": {
+        "entity_1": "IBM",
+        "entity_2": "DXC",
+        "relation": "competition"
+    },
+    "281": {
+        "entity_1": "IBM",
+        "entity_2": "FJTSY",
+        "relation": "competition"
+    },
+    "282": {
+        "entity_1": "IBM",
+        "entity_2": "HCL",
+        "relation": "unknown"
+    },
+    "283": {
+        "entity_1": "IBM",
+        "entity_2": "WIT",
+        "relation": "competition"
+    },
+    "284": {
+        "entity_1": "IBM",
+        "entity_2": "CompetitionIBM",
+        "relation": "unknown"
+    },
+    "285": {
+        "entity_1": "IBM",
+        "entity_2": "7\nGlobal Business Services",
+        "relation": "unknown"
+    },
+    "286": {
+        "entity_1": "MSFT",
+        "entity_2": "AAPL",
+        "relation": "competition"
+    },
+    "287": {
+        "entity_1": "MSFT",
+        "entity_2": "CSCO",
+        "relation": "competition"
+    },
+    "288": {
+        "entity_1": "MSFT",
+        "entity_2": "META",
+        "relation": "competition"
+    },
+    "289": {
+        "entity_1": "MSFT",
+        "entity_2": "GOOGL",
+        "relation": "competition"
+    },
+    "290": {
+        "entity_1": "MSFT",
+        "entity_2": "IBM",
+        "relation": "unknown"
+    },
+    "291": {
+        "entity_1": "MSFT",
+        "entity_2": "OKTA",
+        "relation": "competition"
+    },
+    "292": {
+        "entity_1": "MSFT",
+        "entity_2": "PFPT",
+        "relation": "competition"
+    },
+    "293": {
+        "entity_1": "MSFT",
+        "entity_2": "Slack",
+        "relation": "unknown"
+    },
+    "294": {
+        "entity_1": "MSFT",
+        "entity_2": "GEN",
+        "relation": "competition"
+    },
+    "295": {
+        "entity_1": "MSFT",
+        "entity_2": "ZOOM.1",
+        "relation": "competition"
+    },
+    "296": {
+        "entity_1": "MSFT",
+        "entity_2": "Skype for Business",
+        "relation": "unknown"
+    },
+    "297": {
+        "entity_1": "MSFT",
+        "entity_2": "Marketing Solutions",
+        "relation": "unknown"
+    },
+    "298": {
+        "entity_1": "MSFT",
+        "entity_2": "ORCL",
+        "relation": "competition"
+    },
+    "299": {
+        "entity_1": "MSFT",
+        "entity_2": "CRM",
+        "relation": "competition"
+    },
+    "300": {
+        "entity_1": "MSFT",
+        "entity_2": "SAP",
+        "relation": "competition"
+    },
+    "301": {
+        "entity_1": "MSFT",
+        "entity_2": "Azure",
+        "relation": "unknown"
+    },
+    "302": {
+        "entity_1": "MSFT",
+        "entity_2": "AMZN",
+        "relation": "competition"
+    },
+    "303": {
+        "entity_1": "MSFT",
+        "entity_2": "IBM",
+        "relation": "competition"
+    },
+    "304": {
+        "entity_1": "MSFT",
+        "entity_2": "VMW",
+        "relation": "competition"
+    },
+    "305": {
+        "entity_1": "MSFT",
+        "entity_2": "HPQ",
+        "relation": "competition"
+    },
+    "306": {
+        "entity_1": "MSFT",
+        "entity_2": "RHT",
+        "relation": "competition"
+    },
+    "307": {
+        "entity_1": "MSFT",
+        "entity_2": "BMMI",
+        "relation": "competition"
+    },
+    "308": {
+        "entity_1": "MSFT",
+        "entity_2": "ADBE",
+        "relation": "competition"
+    },
+    "309": {
+        "entity_1": "MSFT",
+        "entity_2": "Eclipse",
+        "relation": "unknown"
+    },
+    "310": {
+        "entity_1": "MSFT",
+        "entity_2": "Enterprise Services",
+        "relation": "unknown"
+    },
+    "311": {
+        "entity_1": "MSFT",
+        "entity_2": "Tencent",
+        "relation": "unknown"
+    },
+    "312": {
+        "entity_1": "MSFT",
+        "entity_2": "NFLX",
+        "relation": "competition"
+    },
+    "313": {
+        "entity_1": "MSFT",
+        "entity_2": "Nintendo",
+        "relation": "unknown"
+    },
+    "314": {
+        "entity_1": "MSFT",
+        "entity_2": "Sony",
+        "relation": "unknown"
+    },
+    "315": {
+        "entity_1": "MSFT",
+        "entity_2": "Office",
+        "relation": "unknown"
+    },
+    "316": {
+        "entity_1": "MSFT",
+        "entity_2": "Linux",
+        "relation": "unknown"
+    },
+    "317": {
+        "entity_1": "MSFT",
+        "entity_2": "the Java Platform Enterprise Edition",
+        "relation": "unknown"
+    },
+    "318": {
+        "entity_1": "MSFT",
+        "entity_2": "MySQL",
+        "relation": "unknown"
+    },
+    "319": {
+        "entity_1": "MSFT",
+        "entity_2": "PHP",
+        "relation": "unknown"
+    },
+    "320": {
+        "entity_1": "MSFT",
+        "entity_2": "Java",
+        "relation": "unknown"
+    },
+    "321": {
+        "entity_1": "MSFT",
+        "entity_2": "Ruby on Rails",
+        "relation": "unknown"
+    },
+    "322": {
+        "entity_1": "MSFT",
+        "entity_2": "Xbox Live",
+        "relation": "unknown"
+    },
+    "323": {
+        "entity_1": "DIS",
+        "entity_2": "SeasonalityThe Company",
+        "relation": "unknown"
+    },
+    "324": {
+        "entity_1": "DIS",
+        "entity_2": "DTC.",
+        "relation": "competition"
+    }
+}
