@@ -34,48 +34,47 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
             session.read_transaction(
                 lambda tx, cypher_query=import_query: tx.run(cypher_query).data())
             self.driver.close()
+    
+    def get_subgraph(self, graph) -> Graph:
+        g = Graph(nodes=[], links=[])
+
+        node_query = '''MATCH (a)
+                        WHERE a.graph="{}"
+                        RETURN DISTINCT a;'''.format(graph)
+        
+        with self.driver.session(database="neo4j") as session:
+            results = session.read_transaction(
+                lambda tx: tx.run(node_query).data())
+            
+            self.driver.close()
+        
+        for record in results:
+            # Append nodes
+            node = record['a']
+            g.nodes.append(Entity(id=node['id'], name=node['name']))
+        
+        edge_query = '''MATCH (a)-[b]->(c)
+                        WHERE a.graph="{}"
+                        RETURN DISTINCT b.id AS id, b.category AS category,
+                        startNode(b).id AS source, endNode(b).id AS target;'''.format(graph)
+        
+        with self.driver.session(database="neo4j") as session:
+            results = session.read_transaction(
+                lambda tx: tx.run(edge_query).data())
+            
+            self.driver.close()
+        
+        for record in results:
+            # Append links
+            g.links.append(EntityRelation(id=record["id"], category=record["category"], source=record["source"], target=record["target"]))
+        
+        return g
 
     def get_dow30(self) -> Graph:
-        cypher_query = '''MATCH (a)-[b]->(c)
-                          WHERE a.graph="dow30"
-                          RETURN a, b.id AS id, b.category AS category, startNode(b).id AS source, endNode(b).id AS target'''
-
-        g = Graph(nodes=[], links=[])
-
-        with self.driver.session(database="neo4j") as session:
-            results = session.read_transaction(
-                lambda tx, cypher_query=cypher_query: tx.run(cypher_query).data())
-            for record in results:
-                # Append nodes
-                node = record['a']
-                g.nodes.append(Entity(id=node['id'], name=node['name']))
-                # Append links
-                g.links.append(EntityRelation(id=record["id"], category=record["category"], 
-                                                source=record["source"], target=record["target"]))
-
-            self.driver.close()
-        return g
+        return self.get_subgraph("dow30");
     
     def get_sp500(self) -> Graph:
-        cypher_query = '''MATCH (a)-[b]->(c)
-                          WHERE a.graph="sp500"
-                          RETURN a, b.id AS id, b.category AS category, startNode(b).id AS source, endNode(b).id AS target'''
-
-        g = Graph(nodes=[], links=[])
-
-        with self.driver.session(database="neo4j") as session:
-            results = session.read_transaction(
-                lambda tx, cypher_query=cypher_query: tx.run(cypher_query).data())
-            for record in results:
-                # Append nodes
-                node = record['a']
-                g.nodes.append(Entity(id=node['id'], name=node['name']))
-                # Append links
-                g.links.append(EntityRelation(id=record["id"], category=record["category"], 
-                                                source=record["source"], target=record["target"]))
-
-            self.driver.close()
-        return g
+        return self.get_subgraph("sp500");
 
     def get_surrounding_node_by_center(self, center_node, dist_to_center) -> Graph:
         if dist_to_center < 0 or center_node not in self.entity_map:
