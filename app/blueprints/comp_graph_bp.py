@@ -16,6 +16,38 @@ async def handle_request_validation_error(arg):
     return {"message": "Request parameter should be an integer"}, 400
 
 
+@comp_graph_controller.get("/api/comp/dow30")
+@inject
+async def get_dow30(
+    comp_graph_service: CompGraphService = Provide[
+        ApplicationContainer.comp_graph_bp.comp_graph_svc
+    ],
+):
+    result = await comp_graph_service.get_dow30()
+
+    return result.dict()
+
+@comp_graph_controller.get("/api/comp/sp500")
+@inject
+async def get_sp500(
+    comp_graph_service: CompGraphService = Provide[
+        ApplicationContainer.comp_graph_bp.comp_graph_svc
+    ],
+):
+    result = await comp_graph_service.get_sp500()
+
+    return result.dict()
+
+@comp_graph_controller.get("/api/comp/sample")
+@inject
+async def get_sample(
+    comp_graph_service: CompGraphService = Provide[
+        ApplicationContainer.comp_graph_bp.comp_graph_svc
+    ],
+):
+    result = await comp_graph_service.get_sample()
+    return result.dict()
+
 @comp_graph_controller.get("/api/comp/surrounding")
 @validate_querystring(GetSurroundingByNodeRequest)
 @inject
@@ -31,7 +63,14 @@ async def get_surrounding_by_node(
         return {"message": "node_id can not be empty"}, http.HTTPStatus.BAD_REQUEST
     if expand_number_of_layers is None:
         return {"message": "expand_number_of_layers can not be empty"}, http.HTTPStatus.BAD_REQUEST
+    
+    # below flags are true by default if not included in the request
+    competition = query_args.competition
+    product = query_args.product
+    other = query_args.other
+    unknown = query_args.unknown
+    flags = [competition, product, other, unknown]
 
-    result = await comp_graph_service.get_surrounding_by_node(node_id, expand_number_of_layers)
+    result = await comp_graph_service.get_surrounding_by_node(node_id, expand_number_of_layers, flags)
 
     return result.dict()

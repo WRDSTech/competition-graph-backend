@@ -32,7 +32,8 @@ def _read_graph_from_json_file(path: str,
                                entity_map: Dict[int, str],
                                relationship_map: Dict[int, str],
                                relation2id: Dict[str, int],
-                               graph: collections.defaultdict[int, List[Tuple[int, int]]]) -> Tuple[int, int]:
+                               graph):
+                            #    graph: collections.defaultdict[int, List[Tuple[int, int]]]) -> Tuple[int, int]:
     if not path.endswith(".json"):
         raise InvalidFileTypeException("Filetype must be json.")
 
