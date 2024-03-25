@@ -6,6 +6,7 @@ from app.repository.comp_graph_repository import CompanyGraphDao
 
 from neo4j import GraphDatabase
 
+from credential import NEO4J_GRAPH_DB_URI, NEO4J_GRAPH_DB_USER, NEO4J_GRAPH_DB_PASSWORD
 
 class CompanyGraphDaoImpl(CompanyGraphDao):
     def __init__(self, entity_map, relationship_map, complete_graph):
@@ -14,9 +15,8 @@ class CompanyGraphDaoImpl(CompanyGraphDao):
         self.complete_graph = complete_graph
 
         self.driver = GraphDatabase.driver(
-            # "bolt://host.docker.internal:7687",
-            "bolt://localhost:7687",
-            auth=("neo4j", "wrdsdbms")
+            NEO4J_GRAPH_DB_URI,
+            auth=(NEO4J_GRAPH_DB_USER, NEO4J_GRAPH_DB_PASSWORD)
         )
 
         import_query = '''CALL gds.graph.exists('graph') YIELD exists AS graphExists
