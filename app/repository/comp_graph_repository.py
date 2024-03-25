@@ -18,5 +18,5 @@ class CompanyGraphDao(abc.ABC):
         raise NotImplementedError
     
     @abstractmethod
-    def get_surrounding_node_by_center(self, center_node, dist_to_center) -> Graph:
+    def get_surrounding_node_by_center(self, center_node, dist_to_center, flags) -> Graph:
         raise NotImplementedError

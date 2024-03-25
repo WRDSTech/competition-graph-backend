@@ -16,8 +16,8 @@ class CompGraphServiceImpl(CompGraphService):
     async def get_sample(self) -> Graph:
         return self.repo.get_sample_graph()
 
-    async def get_surrounding_by_node(self, node_id, expand_number_of_layers) -> Graph:
+    async def get_surrounding_by_node(self, node_id, expand_number_of_layers, flags) -> Graph:
         surrounding = self.repo.get_surrounding_node_by_center(
-            node_id, expand_number_of_layers
+            node_id, expand_number_of_layers, flags
         )
         return surrounding
